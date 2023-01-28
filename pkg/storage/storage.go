@@ -18,7 +18,6 @@ func (s StudentsRepo) Put(student *student.Student) {
 func (s StudentsRepo) Get(studentName string) (*student.Student, error) {
 	ss, err := s[studentName]
 	if !err {
-		fmt.Println(err)
 		return nil, fmt.Errorf("no such student")
 	}
 	return ss, nil
